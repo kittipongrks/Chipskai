@@ -1,0 +1,116 @@
+
+#main-menu{
+    margin : 10%;
+    margin-top: 0;
+}
+#BoxSet{
+    font-size: 5rem;
+    margin : 0;
+}
+#Clothes{
+    font-size: 5rem;
+    margin: 0;
+}
+.text-header{
+    margin : 3%;
+    color : #fff;
+}
+.text{
+    text-align: center;
+}
+.allmember{
+    margin: 10%;
+    margin-top: 0;
+    display: flex;
+    text-align: center;
+}
+.member i {
+    scale: 2;
+}
+@media (max-width : 880px){
+    .allmember{
+        display:inline-block;
+        justify-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+.member{
+    padding: 4%;
+    width: 50%;
+    height: 40%;
+    background-color: #ffffff;
+    margin: 1%;
+    border-radius: 10px;
+    box-shadow:5px, #ffffff; 
+    justify-content: center;
+    text-align: center;
+    transition: 0.3s;
+    border: none;
+}
+.member a{
+    font-size: 0.9rem;
+}
+.member:hover{
+    scale: 1.1;
+    transition: ease-in-out ,0.3s;
+}
+
+.slide-main{
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+.slides{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap : 50px;
+    color : #fff;
+    scroll-snap-align: start;
+}
+.slide1{
+    background : linear-gradient(to right , rgb(41,42,45) , rgb(26,26,26));
+}
+.slide2{
+    background : linear-gradient(to right , #ffffff , #b5b5b5);
+    color : #000;
+}
+.slide3{
+    background : linear-gradient(to right , rgb(26,26,26) , rgb(26,26,26));
+}
+.slide4{
+    background : linear-gradient(to right , #ffffff , #b5b5b5);
+    color : #000;
+}
+.slides img{
+    width: 200px;
+}
+.slide-main button{
+    background-color: rgb(255, 255, 255);
+    font-size: 14px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border : none;
+    transition: 0.4s;
+    padding: 15px;
+}
+.slide-main button a{
+    padding-left: 50px;
+    padding-right: 50px;
+    transition: 0.3s;
+}
+.slide-main button:hover{
+    background: linear-gradient(to right,#3e3f42 , #333336); 
+    transition: 0.3s;
+    scale: 1.1;
+}
+.slide-main button:hover a{
+    color : rgb(255, 255, 255);
+    transition: 0.3s;
+}

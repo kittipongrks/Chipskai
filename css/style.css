@@ -1,0 +1,243 @@
+:root{
+    --heading-font: "Raleway",  sans-serif;
+    --nav-font: "Poppins",  sans-serif;
+    --thai-font : "Noto Sans Thai", sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0px;
+    font-family: "oswald";
+    background: linear-gradient(to right,#292a2e , #1a1a1b);
+    background-size: cover;
+}
+main{
+    margin : 0px;
+    overflow-x: hidden;
+    
+}
+#main-content{
+    font-weight: weight;
+    font-style: normal;
+    font-family: var(--thai-font)
+    
+}
+.button a{
+    text-decoration: none;
+    color: #000000;
+}
+.allheader{
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+.header{
+    margin-bottom: 0px;
+    padding: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin : 0px;
+    display: flex;
+    justify-content:space-between;
+    background-color: #ffffff;
+    z-index: 100;
+    
+}
+.menu-header{
+    color: #000000;
+}
+
+#logo-head{
+    height: 100px;
+}
+
+
+
+.login-header button{
+    background-color: rgb(246, 246, 246);
+    height: 45%;
+    width: 140%;
+    border-radius: 30px;
+    text-align: center;
+    border-style: none;
+    transition: 0.3s;
+}
+.login-header button:hover{
+    background-color: #3f3f3f;
+    border-style: none;
+    transition: 0.3s;
+}
+.login-header button:hover a{
+    color: #ffffff;
+}
+.login-header button:hover i{
+    color: #ffffff;
+}
+.login-header a{
+    color: #000000;
+    text-decoration: none;
+    font-family: "Barlow", sans-serif;
+    font-weight: 500;
+}
+.nav-bar{
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    position: sticky;
+    top : 0;
+    z-index: 100;
+}
+.nav-bar ul{
+    list-style-type: none ;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+.nav-bar a{
+    color :black;
+    text-decoration: none;
+    padding: 20px;
+    display:block;
+    text-align: center;
+    position: relative;
+    transition-timing-function: ease-in-out;
+    transition-duration: .3s;
+}
+.nav-bar a:focus{
+    background-color: #3f3f3f;
+}
+@media (max-width : 900px){
+    .nav-bar a{
+        font-size: 13px;
+    }
+}
+.nav-bar a::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 5px;
+    background-image: linear-gradient(to right, rgb(174, 174, 174),rgb(53, 53, 53));
+    bottom:1pc;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 30px;
+    transition: 0.3s;
+}
+.nav-bar a:hover::after{
+    width: 50%;
+}
+.nav-bar ul li{
+    width: 18%;
+}
+.nav-bar a:hover{
+    background-color: rgb(222, 222, 222);
+    border-radius: 10px;
+}
+.nav-bar li{
+    display: inline-block;
+}
+#footer{
+    background-color: rgb(255, 255, 255);
+    padding: 1%;
+    margin-top: 10px;
+    display: flex;
+    justify-content:space-around;
+    font-family: "Barlow", sans-serif;
+}
+.chipskai a{
+    text-decoration: none;
+}
+.footer-about{
+    margin-right : 10%;
+}
+.footer-about ul{
+    list-style-type:none;
+    text-align: left;
+}
+.footer-about li{
+    list-style-type:none;
+}
+.footer-about b{
+    color : rgb(62, 62, 62);
+    font-weight: 600;
+}
+.footer-about a{
+    color : rgb(62, 62, 62);
+    font-weight: 400;
+}
+.contract-footer{
+    text-align: right;
+    padding-right: 20px;
+}
+.contract-footer-ul{
+    list-style-type: none ;
+    display: flex;
+    justify-content: end;
+}
+.contract-footer a {
+    font-size: 20px;
+    color : rgb(62, 62, 62);
+    padding-left: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.contract-footer b{
+    color:rgb(111, 111, 111);
+    font-family: "Barlow", sans-serif;
+}
+.fa-brands.fa-youtube:hover{
+    color : red ;
+    transform: translateY(-3px);
+    transition :  all ,0.4s;
+}
+.fa-brands.fa-facebook:hover{
+    color: blue;
+    transform: translateY(-3px);
+    transition :  all ,0.4s;
+}
+.fa-brands.fa-instagram:hover{
+    color:rgb(209, 29, 178);
+    transform: translateY(-3px);
+    transition :  all ,0.4s;
+}
+.fa-brands.fa-tiktok:hover{
+    color :black;
+    transform: translateY(-3px);
+    transition :  all ,0.4s;
+}
+.fa-brands.fa-x-twitter:hover{
+    color:black;
+    transform: translateY(-3px);
+    transition :  all ,0.4s;
+}
+.fa-brands.fa-twitch:hover{
+    color :blueviolet;
+    font-size: 21px;
+}
+.fa-solid.fa-right-to-bracket{
+    color : rgb(0, 0, 0)
+}
+.fa-solid.fa-user-plus{
+    color: #000000;
+}
+.fa-solid.fa-expand{
+    color :rgb(0, 0, 0);
+}
+.fa-solid.fa-expand:hover{
+    scale: 1.2;
+}
+
+
+
+
+/*scrollber*/
+::-webkit-scrollbar{
+    width:5%
+}
+::-webkit-scrollbar-track{
+    background: #ffffff;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(rgb(0, 0, 0),rgb(57, 57, 57));
+    border-radius: 1%;
+}

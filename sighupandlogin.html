@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="picture/png" href="picture/chipskai_noBG_zoom.png">
+    <script src="https://kit.fontawesome.com/5368a84f0e.js" crossorigin="anonymous"></script>
+    <link rel = "stylesheet" href = "css/style-log.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;
+    0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dosis:wght@200..800&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;
+    0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <title>Sign Up</title>
+    <link rel="script" href = "script.js">
+</head>
+<body>
+    <div class="container" id = "container">
+        <div class="form-container sign-in">
+            <form>
+                <h1>Sign In</h1>
+                <div class="social-icons">
+                    <a href = "#"><i class="fa-brands fa-google"></i></a>
+                    <a href = "#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href = "#"><i class="fa-brands fa-github"></i></a>
+                    <a href = "#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <p>use your email for sign in</p>
+                <input type = "email" placeholder="email" required>
+                <input type = "password" placeholder="password" required>
+                <a href = "#">Forget Your Password?</a>
+                <button class = "button">Sign In</button>
+            </form>
+        </div>
+        <div class="form-container sign-up">
+            <form>
+                <h1>Create Account</h1>
+                <div class="social-icons">
+                    <a href = "#"><i class="fa-brands fa-google"></i></a>
+                    <a href = "#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href = "#"><i class="fa-brands fa-github"></i></a>
+                    <a href = "#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <p>use your email to register</p>
+                <input type = "text" placeholder="name" required>
+                <input type = "email" placeholder="email" required>
+                <input type = "password" placeholder="password" required>
+                <button class = "button">Sign Up</button>
+            </form>
+        </div>
+        <div class="toggle-container" id ="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Hello, There!</h1>
+                    <p>you don't have an account? </p>
+                    <p>if you already have an account</p>
+                    <i class="fa-solid fa-caret-down"></i>
+                    <button class = "hidden" id = "login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Welcome Back Bo!</h1>
+                        <p>enter your email password to get privilege</p>
+                        <ul>
+                            <li><p>Get the point !</p></li>
+                            <li><p>Delicious food discount</p></li>
+                            <li><p>Rewards and Special Events</p></li>
+                        </ul>
+                        <p>you don't have an account?</p>
+                        <i class="fa-solid fa-caret-down"></i>
+                        <button class = "hidden" id = "register">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href = "index.html"><i class="fa-solid fa-circle-xmark"></i></a>
+    <script src = "script.js"></script>
+</body>
+</html>

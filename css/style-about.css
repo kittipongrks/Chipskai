@@ -1,0 +1,131 @@
+
+.box-left{
+    border: 0.2rem;
+    border-color: #000;
+    width: 50%;
+    text-align: center;
+}
+.box-left img{
+    width: 500px;
+    height: auto;
+}
+
+.fp{
+    display:flex;
+    margin: 5%;
+}
+.box-right{
+    width: 50%;
+    padding: 1%;
+}
+.box-right p{
+    color : white;
+    text-align:left;
+    font-size: 18px;
+}
+.box-right h2{
+    color :#ffffff;
+
+}
+@media (max-width : 1080px) {
+    .fp{
+        display : flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1%;
+    }
+    .box-left img{
+        width: 100%;
+    }
+}
+#main-about{
+    font-family: var(--thai-font);
+}
+#main-about h1,h2,h3,h4,h5,h6{
+    font-family: var(--heading-font);
+    color: #ffffff;
+}
+#main-about p{
+    font-family: var(--thai-font);
+    color :#ffffff;
+}
+
+.text-header{
+    text-align: center;
+}
+.bg-text-header{
+    text-align: center;
+    opacity: 0.1;
+    scale : 1.2;
+    transform: translateY(-100%);
+}
+.sp{
+    padding: 15%;
+}
+.all-logo{
+    display : flex
+}
+.logo{
+    text-align: center;
+    background-color: #131313;
+    padding: 0 2% 0 2%;
+    margin: 0 1% 0 2%;
+    border-radius: 10px;
+    box-shadow: 10px 10px rgba(255,255,255,0.2);
+}
+.text-title{
+    text-align: center;
+}
+.to-personal-web{
+    height: 80vh;
+}
+.box-about-builder{
+    justify-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 60vh;
+    background-image: url("../Personal/picture/bg11.gif");
+    background-position: center;
+}
+.text-builder{
+    font-family: var(--thai-font);
+    font-weight: 400;
+    position:relative;
+    top: 50%;
+}
+.viewport{
+    background: linear-gradient(90deg, #fff 50%, #1a1a1b00 50%);
+    background-size: 200%;
+    background-position: right;    
+    color: #ffffff;
+    padding: 10px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-position 0.4s ease-in-out, color 0.4s ease-in-out;
+    transition: 0.4s;
+    border-color: #ffffff;
+  
+  }
+  .viewport:hover{
+    background-position: left;
+    color: #000000;
+    transition: 0.4s;
+  }
+  .viewport:hover i{
+    transform: translateX(5px);
+    transition: 0.4s;
+  }
+  .button-center{
+    text-align: center;
+  }
+  .viewport a{
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .viewport:hover a{
+    background-position: left;
+    color: #000000;
+    transition: 0.3s;
+  }

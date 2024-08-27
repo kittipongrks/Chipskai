@@ -1,0 +1,147 @@
+.nav-menu{
+    position: sticky;
+    overflow-x: hidden;
+    top :6%;
+    z-index: 100;
+}
+.nav-menu ul{
+    display: flex;
+    list-style: none;
+    background-color: #1a1a1b;
+    margin: 0;
+    padding: 1%;
+    text-decoration: none;
+    justify-content:space-evenly;
+    width: 100%;
+}
+.nav-menu a{
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    overflow-y: none;
+    transition: 0.3s;
+}
+.nav-menu a:hover{
+    color: #7e7e7e;
+    transition: ease-in-out 0.3s;
+}
+#main-menu{
+    padding: 3%;
+    margin :  0 5px 0 10px ;
+}
+.menu{
+    background-color: white;
+    transition: ease-in-out 0.3s;
+    
+}
+.menu:hover{
+    scale : 1.1;
+    transition: ease-in-out 0.3s;
+    
+}
+.menu a {
+    text-align: center;
+}
+.topic-menu a{
+    color: white;
+    font-size: large;
+    margin : 0;
+}
+@keyframes appear {
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale : 1;
+    }
+}
+.Allmenu{
+    margin-top: 10px;
+    text-align: center;
+    
+}
+
+.menu{
+    display:inline-block;
+    border: 2px solid ;
+    margin: 2%;
+    background-color: rgb(255, 255, 255);
+    padding: 2%;
+    justify-content: flex-start;
+    width: 16%;
+    height: auto;
+}
+@media (max-width : 1400px){
+    .menu{
+        width: 20%;
+    }
+}
+@media (max-width : 1176px){
+    .menu{
+        width: 35%;
+    }
+}
+@media (max-width : 768px) {
+    .menu{
+        width: 70%;
+    }
+}
+@media (max-width : 900px){
+    .nav-menu a{
+        font-size: 13px;
+        transition: 0.3s;
+    }
+}
+.menu img{
+    width: 100%;
+}
+.list{
+    display: flex;
+    border: 2px solid ;
+    margin: 2%;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+}
+.list img{
+    width: 30%;
+}
+.menu a {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.description{
+    font-size: 1rem;
+    text-align: center;
+}
+.description ul{
+    display: flex;
+    list-style-type: none;
+    justify-content:baseline;
+    
+}
+.description ul a{
+    color :black;
+}
+.topic-menu a{
+    font-size: 3rem;
+    color:#ffffff;
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+}
+.text-header{
+    margin : 3%;
+    color : #fff;
+}
+#BoxSet{
+    font-size: 4rem;
+    font-weight: 500;
+}
+#Clothes{
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+
+

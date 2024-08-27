@@ -1,0 +1,151 @@
+* {box-sizing:border-box}
+
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+}
+  
+.slides {
+    display: none;
+}
+
+  
+  img {
+    vertical-align: middle;
+  }
+  
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: rgb(225, 225, 225);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+.text-header{
+    color: #ffffff;
+    text-align: center;
+    font-weight: 600;
+}
+.text-header-member{
+    text-align: center;
+    font-weight: 600;
+}
+.title-header{
+    font-weight: 400;
+}
+  /*----------------------member-----------------*/
+.box-member{
+    text-align: center;
+    color: #000000;
+    font-family: "Noto Sans Thai", sans-serif;
+    margin : 3rem auto ;
+    background-color: #ffffff;
+    padding: 30px 0 0 0;
+    width: 80%;
+    border-radius: 10px;
+}
+.members{
+    background-color: #fff;
+    margin : 1rem auto;
+    width: 100%;
+    text-align: start;
+    padding: 2%;
+}
+.members-center{
+    display: flex;
+    margin: 0 auto;
+    width: 60%;
+  }
+@media (max-width : 1000px){
+    .members-center{
+        display: block;
+        
+    }
+}
+
+.member{
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: black;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 2%;
+    height: auto;
+}
+.button-in-member{
+    width: 100%;
+    text-align: center;
+    justify-items: end;
+    vertical-align: bottom;
+}
+
+
+
+.button-in-member button{
+    margin: 1rem;
+    background: linear-gradient(90deg, #000000 50%, #1a1a1b00 50%);
+    background-size: 300%;
+    background-position: right;    
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-position 0.6s ease-in-out, color 0.6s ease-in-out;
+    transition: 0.6s;
+    border-color: #ffffff;
+  
+  }
+  .button-in-member button:hover{
+    background-position: left;
+    color: #ffffff;
+    transition: 0.6s;
+  }
+  .button-in-member button a{
+    color: #000000;
+    text-decoration: none;
+  }
+  .button-in-member button:hover a{
+    background-position: left;
+    color: #fff;
+    transition: 0.6s;
+  }
+  .member-header{
+    font-size: large;
+    font-weight: 600;
+  }
+  .bath{
+    color :rgba(0, 0, 0, 0.7);
+  }
+  .text-header{
+    font-family: "Noto Sans Thai", sans-serif;;;
+  }
+  
+
+
