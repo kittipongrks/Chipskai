@@ -29,7 +29,7 @@
 }
 @media (max-width : 880px){
     .allmember{
-        display:inline-block;
+        display:block;
         justify-items: center;
         text-align: center;
         justify-content: center;

@@ -1,7 +1,7 @@
 .nav-menu{
     position: sticky;
     overflow-x: hidden;
-    top :6%;
+    top :60px;
     z-index: 100;
 }
 .nav-menu ul{

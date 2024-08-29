@@ -117,6 +117,7 @@ hr{
   height: 90vh;
   width: auto;
   opacity: 0.8;
+  overflow-x: hidden;
 }
 @media (max-width: 1199px) {
   .background{
