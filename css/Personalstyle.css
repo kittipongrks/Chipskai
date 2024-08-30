@@ -110,6 +110,9 @@ hr{
   margin-left: auto;
   margin-right: auto;
 }
+.home_content{
+  width: 100%;
+}
 .background{
   position: absolute;
   z-index: -3;
@@ -234,8 +237,6 @@ font-size: 2rem;
 }
 .text-about-me h1,h3{
   font-family: var(--thai-font);
-}
-.information{
 }
 @media (max-width:800px ){
   .block-about-me{
