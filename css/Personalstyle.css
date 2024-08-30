@@ -42,7 +42,6 @@ h1,h2,h3,h4,h5,h6{
 *{
  margin: 0;
  padding: 0;
- overflow-x: none;
 }
 html{
   scroll-behavior: smooth;
@@ -115,7 +114,7 @@ hr{
   position: absolute;
   z-index: -3;
   height: 90vh;
-  width: auto;
+  max-width: auto;
   opacity: 0.8;
   overflow-x: hidden;
 }
@@ -130,7 +129,7 @@ hr{
   margin-left: 10%;
   height: 90vh;
   align-items: center;
-  width: 100%;
+  width: auto;
 
 }
 .text-left{
@@ -188,7 +187,6 @@ font-size: 2rem;
 .box__content{
   width: auto;
   height: auto;
-  border-style: solid;
   padding: 6%;
   border-radius: 10px;
   background-color: var(--background_color);
@@ -232,14 +230,12 @@ font-size: 2rem;
 }
 .text-about-me{
   width: 20rem;
-  margin-left: 1%;
   font-family: var(--thai-font);
 }
 .text-about-me h1,h3{
   font-family: var(--thai-font);
 }
 .information{
-  margin-left: 2%;
 }
 @media (max-width:800px ){
   .block-about-me{
