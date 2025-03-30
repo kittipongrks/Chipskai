@@ -11,6 +11,7 @@ pipeline {
             agent {
                 docker {
                     image 'node:18-slim'
+                    args '-v C:ProgramData/Jenkins/.jenkins/workspace/kitti:/workspace'
                     reuseNode true
                 }
             }
