@@ -10,14 +10,14 @@ pipeline {
 
     stages {
         stage('Commit and Push GitHub'){
-          script{
-            bat '''
-              git config --global user.name "kittipongrks"
-              git config --global user.email "icafez4444@gmail.com"
-              git add .
-              git commit -m "Automated commit from Jenkins"
-              git push origin main
-            '''
+          steps {
+              bat '''
+                git config --global user.name "kittipongrks"
+                git config --global user.email "icafez4444@gmail.com"
+                git add .
+                git commit -m "Automated commit from Jenkins"
+                git push origin main
+              '''
           }
         }
         stage('Build') {
