@@ -8,9 +8,17 @@ pipeline {
     }
 
     stages {
+      stage('Linux Environment') {
+          steps {
+              echo "🔧 Setting up Linux environment..."
+              bat '''
+                  wsl --install
+              '''
+          }
+        }
         stage('Commit and Push GitHub'){
           steps {
-              bat '''
+              sh '''
                 git config --global user.name "kittipongrks"
                 git config --global user.email "icafez4444@gmail.com"
                 git add .
@@ -22,7 +30,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo "✅ Checking required files..."
-                bat '''
+                sh '''
                     test -f index.html || (echo "❌ Missing index.html" && exit 1)
                     echo "✅ Build check passed."
                     echo "NETLIFY_AUTH_TOKEN: $NETLIFY_AUTH_TOKEN"
@@ -35,14 +43,14 @@ pipeline {
         stage('Test') {
             steps {
                 echo "🧪 Testing quote function load..."
-                bat 'echo "⚠️ No test implemented yet"'
+                sh 'echo "⚠️ No test implemented yet"'
             }
         }
 
         stage('Deploy') {
             steps {
                 echo "🚀 Deploying to Netlify..."
-                bat '''
+                sh '''
                     npm install netlify-cli
                     npx netlify deploy --prod --dir=build --auth=$NETLIFY_AUTH_TOKEN --site=$NETLIFY_SITE_NAME
                 '''
