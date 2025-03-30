@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         NETLIFY_SITE_NAME = '8943b822-9ef4-4dfb-8598-7852a6b1c124' // ✅ ใช้ชื่อที่อยู่ใน Netlify dashboard
-        NETLIFY_AUTH_TOKEN = credentials('netlify-token') // ✅ token จาก Jenkins Credentials
+        NETLIFY_AUTH_TOKEN = credentials('NETLIFY_AUTH') // ✅ token จาก Jenkins Credentials
     }
 
     stages {
