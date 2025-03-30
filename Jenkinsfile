@@ -7,6 +7,14 @@ pipeline {
     }
 
     stages {
+        stage('Preparation') {
+            steps {
+                echo "🔄 Preparing environment..."
+                sh '''
+                  docker login -u kittipong13
+                '''
+            }
+        }
         stage('Build') {
             agent {
                 docker {
