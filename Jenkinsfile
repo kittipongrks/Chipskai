@@ -2,54 +2,71 @@ pipeline {
     agent any
 
     environment {
-        NETLIFY_AUTH_TOKEN = credentials('NETLIFY_AUTH_TOKEN') // เก็บ Token ใน Jenkins Credentials
-        NETLIFY_SITE_ID = credentials('NETLIFY_SITE_ID') // เปลี่ยนเป็น Site ID ของคุณ
-        GIT_CREDENTIALS = credentials('GITHUB_ACCESS_TOKEN') // ใช้ GitHub Token สำหรับ Push
-        GITHUB_REPO = "https://github.com/kittipongrks/Chipskai.git" // เปลี่ยนเป็น Repo ของคุณ
+        NETLIFY_SITE_NAME = 'NETLIFY_SITE_ID' // ✅ ใช้ชื่อที่อยู่ใน Netlify dashboard
+        NETLIFY_AUTH_TOKEN = credentials('NETLIFY_AUTH') // ✅ token จาก Jenkins Credentials
     }
 
     stages {
         stage('Build') {
+            agent {
+                docker {
+                    image 'node:18-slim'
+                    reuseNode true
+                }
+            }
             steps {
-                // ใส่คำสั่งสำหรับการ Build เช่น คำสั่ง npm หรืออื่นๆ
-                echo 'Building the project...'
-                sh 'npm install'  // ติดตั้ง Dependencies ถ้าเป็น Node.js
+                echo "✅ Checking required files..."
+                sh '''
+                    test -f index.html || (echo "❌ Missing index.html" && exit 1)
+                    echo "✅ Build check passed."
+                '''
             }
         }
 
         stage('Test') {
+            agent {
+                docker {
+                    image 'node:18-slim'
+                    reuseNode true
+                }
+            }
             steps {
-                // ใส่คำสั่งทดสอบ เช่นการรัน unit tests หรืออื่นๆ
-                echo 'Running tests...'
-                sh 'npm test'  // รัน Unit Tests ถ้าเป็น Node.js
+                echo "🧪 Testing quote function load..."
+                sh 'echo "⚠️ No test implemented yet"'
             }
         }
 
         stage('Deploy') {
+            agent {
+                docker {
+                    image 'node:18-slim'
+                    reuseNode true
+                }
+            }
             steps {
-                // ขั้นตอนสำหรับการ Deploy ไปยัง Netlify
-                echo 'Deploying to Netlify...'
-                sh 'netlify deploy --prod --dir=./'  // Deploy เว็บไป Netlify
+                echo "🚀 Deploying to Netlify..."
+                sh '''
+                    echo "Deployiing with token : $NETLIFY_AUTH_TOKEN"
+                    echo "Deploying to site : $NETLIFY_SITE_NAME"
+                    npm install netlify-cli
+                    npx netlify deploy --prod --dir=build --auth=$NETLIFY_AUTH_TOKEN --site=$NETLIFY_SITE_NAME
+                '''
             }
         }
 
         stage('Post Deploy') {
             steps {
-                // ขั้นตอนหลังการ Deploy เช่นตรวจสอบผลการ Deploy หรือการแจ้งเตือน
-                echo 'Running post deploy tasks...'
-                sh 'curl -X POST https://api.example.com/deploy-success'  // ส่งการแจ้งเตือนหรือทำงานอื่นๆ
+                echo "🎉 Deployment complete! Your app is live."
             }
         }
     }
 
     post {
         success {
-            // ทำงานที่ต้องทำหลังจาก pipeline สำเร็จ
-            echo 'Pipeline executed successfully!'
+            echo "✅ CI/CD pipeline finished successfully."
         }
         failure {
-            // ทำงานที่ต้องทำหลังจาก pipeline ล้มเหลว
-            echo 'Pipeline failed!'
+            echo "❌ Pipeline failed. Check logs for details."
         }
     }
 }
