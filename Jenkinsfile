@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Commit and Push GitHub'){
           script{
-            sh '''
+            bat '''
               git config --global user.name "kittipongrks"
               git config --global user.email "icafez4444@gmail.com"
               git add .
@@ -23,7 +23,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo "✅ Checking required files..."
-                sh '''
+                bat '''
                     test -f index.html || (echo "❌ Missing index.html" && exit 1)
                     echo "✅ Build check passed."
                     echo "NETLIFY_AUTH_TOKEN: $NETLIFY_AUTH_TOKEN"
@@ -36,14 +36,14 @@ pipeline {
         stage('Test') {
             steps {
                 echo "🧪 Testing quote function load..."
-                sh 'echo "⚠️ No test implemented yet"'
+                bat 'echo "⚠️ No test implemented yet"'
             }
         }
 
         stage('Deploy') {
             steps {
                 echo "🚀 Deploying to Netlify..."
-                sh '''
+                bat '''
                     npm install netlify-cli
                     npx netlify deploy --prod --dir=build --auth=$NETLIFY_AUTH_TOKEN --site=$NETLIFY_SITE_NAME
                 '''
