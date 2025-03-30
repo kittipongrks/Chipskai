@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         NETLIFY_AUTH_TOKEN = credentials('NETLIFY_AUTH_TOKEN') // เก็บ Token ใน Jenkins Credentials
-        NETLIFY_SITE_ID = "your-netlify-site-id" // เปลี่ยนเป็น Site ID ของคุณ
+        NETLIFY_SITE_ID = credentials('NETLIFY_SITE_ID') // เปลี่ยนเป็น Site ID ของคุณ
         GIT_CREDENTIALS = credentials('GITHUB_ACCESS_TOKEN') // ใช้ GitHub Token สำหรับ Push
         GITHUB_REPO = "https://github.com/kittipongrks/Chipskai.git" // เปลี่ยนเป็น Repo ของคุณ
     }
