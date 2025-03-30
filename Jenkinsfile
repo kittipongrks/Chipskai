@@ -19,6 +19,9 @@ pipeline {
                 sh '''
                     test -f index.html || (echo "❌ Missing index.html" && exit 1)
                     echo "✅ Build check passed."
+                    echo "NETLIFY_AUTH_TOKEN: $NETLIFY_AUTH_TOKEN"
+                    echo "NETLIFY_SITE_NAME: $NETLIFY_SITE_NAME"
+                    docker pull node:18-slim
                 '''
             }
         }
