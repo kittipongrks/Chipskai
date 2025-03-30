@@ -4,7 +4,6 @@ pipeline {
     environment {
         NETLIFY_SITE_NAME = '8943b822-9ef4-4dfb-8598-7852a6b1c124' // ✅ ใช้ชื่อที่อยู่ใน Netlify dashboard
         NETLIFY_AUTH_TOKEN = credentials('NETLIFY_AUTH') // ✅ token จาก Jenkins Credentials
-        GIT_CREDENTIALS = credentials('GITHUB_CREDENTIALS') // ✅ token จาก Jenkins Credentials
         GIT_REPO = 'https://github.com/kittipongrks/Chipskai.git'
     }
 
