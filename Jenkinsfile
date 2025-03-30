@@ -21,13 +21,6 @@ pipeline {
           }
         }
         stage('Build') {
-            agent {
-                docker {
-                    image 'node:18-slim'
-                    args '-v C:ProgramData/Jenkins/.jenkins/workspace/kitti:/workspace'
-                    reuseNode true
-                }
-            }
             steps {
                 echo "✅ Checking required files..."
                 sh '''
@@ -41,12 +34,6 @@ pipeline {
         }
 
         stage('Test') {
-            agent {
-                docker {
-                    image 'node:18-slim'
-                    reuseNode true
-                }
-            }
             steps {
                 echo "🧪 Testing quote function load..."
                 sh 'echo "⚠️ No test implemented yet"'
@@ -54,12 +41,6 @@ pipeline {
         }
 
         stage('Deploy') {
-            agent {
-                docker {
-                    image 'node:18-slim'
-                    reuseNode true
-                }
-            }
             steps {
                 echo "🚀 Deploying to Netlify..."
                 sh '''
