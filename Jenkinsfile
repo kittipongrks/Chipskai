@@ -1,8 +1,8 @@
 pipeline {
     agent {
         docker {
-            image 'node:18'  // ใช้ Node.js 18 บน Docker
-            args '--user root'  // ให้สิทธิ์ root แก่ container
+            image 'node:18'
+            args '--user root --workdir /workspace'
         }
     }
 
