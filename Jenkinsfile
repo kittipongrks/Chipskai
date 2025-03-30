@@ -13,9 +13,10 @@ pipeline {
               bat '''
                 git config --global user.name "kittipongrks"
                 git config --global user.email "icafez4444@gmail.com"
+                git branch
                 git add .
                 git commit -m "Automated commit from Jenkins"
-                git push origin main
+                git push origin HEAD:main
               '''
           }
         }
