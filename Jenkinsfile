@@ -35,9 +35,16 @@ pipeline {
                 }
             }
             steps {
-                echo "🧪 Testing quote function load..."
+                echo "🧪 Running tests..."
                 sh '''
-                    node -e "require('script.js'); console.log('✅ Script loaded successfully')"
+                    # Install dependencies
+                    npm install
+                    
+                    # Run unit tests
+                    npm test
+                    
+                    # Optional: Run linting
+                    npm run lint || echo "⚠️ Linting issues found, but continuing..."
                 '''
             }
         }
