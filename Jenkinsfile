@@ -35,8 +35,14 @@ pipeline {
                 }
             }
             steps {
+                checkout scm // ดึงโค้ดจาก repository
                 echo "🧪 Running tests..."
                 sh '''
+                    echo "Current directory:"
+                    pwd
+                    echo "Files in workspace:"
+                    ls -la
+                    
                     # Install dependencies
                     npm install
                     
