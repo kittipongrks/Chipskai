@@ -21,7 +21,7 @@ pipeline {
                     test -f aboutUs.html || (echo "❌ Missing AboutUs.html" && exit 1)
                     test -f menu.html || (echo "❌ Missing menu.html" && exit 1)
                     test -f promotion.html || (echo "❌ Missing promotion.html" && exit 1)
-                    test -f signupandlogin.html || (echo "❌ Missing signupandlogin.html" && exit 1)
+                    test -f sighupandlogin.html || (echo "❌ Missing signupandlogin.html" && exit 1)
                     echo "✅ Build check passed."
                 '''
             }
